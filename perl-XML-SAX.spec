@@ -9,7 +9,7 @@ Summary:	XML::SAX - simple API for XML
 Summary(pl):	XML::SAX - proste API dla XML-a
 Name:		perl-XML-SAX
 Version:	0.12
-Release:	4
+Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl

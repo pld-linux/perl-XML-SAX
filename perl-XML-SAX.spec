@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 Patch0:		%{name}-noalter.patch
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 4.0.2-56
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 Provides:	perl(XML::SAX::PurePerl::Productions)
 Provides:	perl(XML::SAX::PurePerl::Reader)
 BuildArch:	noarch

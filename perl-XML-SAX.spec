@@ -9,14 +9,14 @@ Summary:	XML::SAX - Simple API for XML
 Summary(pl):	XML::SAX - Proste API dla XML
 Name:		perl-XML-SAX
 Version:	0.12
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-noalter.patch
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 4.0.2-56
+BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(XML::SAX::PurePerl::Productions)
 Provides:	perl(XML::SAX::PurePerl::Reader)
 BuildArch:	noarch
@@ -45,7 +45,8 @@ bez javowo¶ci.
 %patch -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -55,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-touch $RPM_BUILD_ROOT%{perl_sitelib}/XML/SAX/ParserDetails.ini
+touch $RPM_BUILD_ROOT%{perl_vendorlib}/XML/SAX/ParserDetails.ini
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -63,9 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/XML/SAX.pm
-%dir %{perl_sitelib}/XML/SAX
-%{perl_sitelib}/XML/SAX/*.pm
-%{perl_sitelib}/XML/SAX/PurePerl
-%{perl_sitelib}/XML/SAX/ParserDetails.ini
+%{perl_vendorlib}/XML/SAX.pm
+%dir %{perl_vendorlib}/XML/SAX
+%{perl_vendorlib}/XML/SAX/*.pm
+%{perl_vendorlib}/XML/SAX/PurePerl
+%{perl_vendorlib}/XML/SAX/ParserDetails.ini
 %{_mandir}/man3/*

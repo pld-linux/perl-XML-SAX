@@ -26,6 +26,14 @@ without requiring programmer intervention. Those of you familiar with
 the DBI will be right at home. Some of the designs come from the Java
 JAXP specification (SAX part), only without the javaness.
 
+%description -l pl
+XML::SAX sk³ada siê z kilku klas tworz±cych szkielet do u¿ywania i
+budowania parserów, filtrów i sterowników SAX2 XML w Perlu. Zadaniem
+modu³u jest umo¿liwienie w³±czania ró¿nych parserów SAX do aplikacji
+bez udzia³u programisty. Znaj±cy modu³y DBI bêd± siê czuli jak w domu.
+Niektóre koncepcje pochodz± ze specyfikacji Java JAXP (czê¶æ SAX), ale
+bez javowo¶ci.
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 

@@ -1,12 +1,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	SAX
-Summary:	XML::SAX perl module
-Summary(pl):	Modu³ perla XML::SAX
+Summary:	XML::SAX - Simple API for XML
+Summary(pl):	XML::SAX - Proste API dla XML
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.10
-Release:	2
-License:	GPL
+Version:	0.11
+Release:	1
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03

@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	SAX
+%define		pdir	XML
+%define		pnam	SAX
 Summary:	XML::SAX - simple API for XML
 Summary(pl):	XML::SAX - proste API dla XML-a
 Name:		perl-XML-SAX

@@ -5,7 +5,7 @@ Summary:	XML::SAX - Simple API for XML
 Summary(pl):	XML::SAX - Proste API dla XML
 Name:		perl-XML-SAX
 Version:	0.11
-Release:	3
+Release:	4
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -13,6 +13,8 @@ Patch0:		%{name}-noalter.patch
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.0.2-56
+Provides:	perl(XML::SAX::PurePerl::Productions)
+Provides:	perl(XML::SAX::PurePerl::Reader)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

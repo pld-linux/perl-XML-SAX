@@ -3,9 +3,9 @@
 %define	pnam	SAX
 Summary:	XML::SAX - Simple API for XML
 Summary(pl):	XML::SAX - Proste API dla XML
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-XML-SAX
 Version:	0.11
-Release:	2
+Release:	3
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -47,6 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+touch $RPM_BUILD_ROOT%{perl_sitelib}/XML/SAX/ParserDetails.ini
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -54,5 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_sitelib}/XML/SAX.pm
-%{perl_sitelib}/XML/SAX
+%dir %{perl_sitelib}/XML/SAX
+%{perl_sitelib}/XML/SAX/*.pm
+%ghost %{perl_sitelib}/XML/SAX/ParserDetails.ini
 %{_mandir}/man3/*

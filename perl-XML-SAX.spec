@@ -1,9 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-
 %define	pdir	XML
 %define	pnam	SAX
-%define _noautoreq	"perl(Encode)" "perl(XML::SAX::PurePerl::DocType)" "perl(XML::SAX::PurePerl::DTDDecls)" "perl(XML::SAX::PurePerl::EncodingDetect)" "perl(XML::SAX::PurePerl::NoUnicodeExt)" "perl(XML::SAX::PurePerl::Reader::NoUnicodeExt)" "perl(XML::SAX::PurePerl::Reader::UnicodeExt)" "perl(XML::SAX::PurePerl::UnicodeExt)" "perl(XML::SAX::PurePerl::XMLDecl)"
-
 Summary:	XML::SAX perl module
 Summary(pl):	Modu³ perla XML::SAX
 Name:		perl-%{pdir}-%{pnam}
@@ -12,11 +9,13 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 4.0.2-56
+BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-devel >= 5.6.1
-BuildRequires:	perl-XML-NamespaceSupport >= 1.03
+BuildRequires:	rpm-perlprov >= 4.0.2-56
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define _noautoreq	"perl(Encode)" "perl(XML::SAX::PurePerl::DocType)" "perl(XML::SAX::PurePerl::DTDDecls)" "perl(XML::SAX::PurePerl::EncodingDetect)" "perl(XML::SAX::PurePerl::NoUnicodeExt)" "perl(XML::SAX::PurePerl::Reader::NoUnicodeExt)" "perl(XML::SAX::PurePerl::Reader::UnicodeExt)" "perl(XML::SAX::PurePerl::UnicodeExt)" "perl(XML::SAX::PurePerl::XMLDecl)"
 
 %description
 XML::SAX consists of several framework classes for using and building
@@ -46,14 +45,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %{perl_sitelib}/XML/SAX.pm
 %{perl_sitelib}/XML/SAX
 %{_mandir}/man3/*

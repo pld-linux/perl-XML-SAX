@@ -1,0 +1,4 @@
+- added missing files
+- enabled tests
+- ghostbusted ParserDetails.ini (after reading XML::SAX(3))
+- release 5

@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	SAX
-Summary:	XML::SAX - Simple API for XML
-Summary(pl):	XML::SAX - Proste API dla XML
+Summary:	XML::SAX - simple API for XML
+Summary(pl):	XML::SAX - proste API dla XML-a
 Name:		perl-XML-SAX
 Version:	0.12
 Release:	4

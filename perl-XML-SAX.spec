@@ -4,8 +4,8 @@
 %define	pnam	SAX
 %define _noautoreq	"perl(Encode)" "perl(XML::SAX::PurePerl::DocType)" "perl(XML::SAX::PurePerl::DTDDecls)" "perl(XML::SAX::PurePerl::EncodingDetect)" "perl(XML::SAX::PurePerl::NoUnicodeExt)" "perl(XML::SAX::PurePerl::Reader::NoUnicodeExt)" "perl(XML::SAX::PurePerl::Reader::UnicodeExt)" "perl(XML::SAX::PurePerl::UnicodeExt)" "perl(XML::SAX::PurePerl::XMLDecl)"
 
-Summary:	XML-SAX perl module
-Summary(pl):	Modu³ perla XML-SAX
+Summary:	XML::SAX perl module
+Summary(pl):	Modu³ perla XML::SAX
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.10
 Release:	1

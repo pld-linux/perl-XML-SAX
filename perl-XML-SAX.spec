@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	SAX
@@ -5,7 +9,7 @@ Summary:	XML::SAX - Simple API for XML
 Summary(pl):	XML::SAX - Proste API dla XML
 Name:		perl-XML-SAX
 Version:	0.11
-Release:	4
+Release:	5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -44,6 +48,8 @@ bez javowo¶ci.
 perl Makefile.PL
 %{__make}
 
+%{!?_without_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -60,5 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitelib}/XML/SAX.pm
 %dir %{perl_sitelib}/XML/SAX
 %{perl_sitelib}/XML/SAX/*.pm
-%ghost %{perl_sitelib}/XML/SAX/ParserDetails.ini
+%{perl_sitelib}/XML/SAX/PurePerl
+%{perl_sitelib}/XML/SAX/ParserDetails.ini
 %{_mandir}/man3/*

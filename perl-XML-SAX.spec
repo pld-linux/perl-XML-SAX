@@ -5,12 +5,13 @@ Summary:	XML::SAX - Simple API for XML
 Summary(pl):	XML::SAX - Proste API dla XML
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.11
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Patch0:		%{name}-noalter.patch
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
-BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	perl >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.0.2-56
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,9 +36,10 @@ bez javowo¶ci.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch -p1
 
 %build
-echo 'y' | perl Makefile.PL
+perl Makefile.PL
 %{__make}
 
 %install

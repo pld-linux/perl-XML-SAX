@@ -17,7 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	bff58bd077a9693fc8cf32e2b95f571f
 Patch0:		%{name}-noalter.patch
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires(post):	fileutils
 BuildArch:	noarch

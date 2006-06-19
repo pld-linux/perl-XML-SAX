@@ -1,13 +1,35 @@
---- XML-SAX-0.11/Makefile.PL.orig	Mon Jan 21 22:32:59 2002
-+++ XML-SAX-0.11/Makefile.PL	Sat Sep 14 12:18:55 2002
-@@ -9,20 +9,4 @@
+--- XML-SAX-0.14/Makefile.PL.orig	2006-06-19 09:41:04.000000000 +0200
++++ XML-SAX-0.14/Makefile.PL	2006-06-19 09:42:49.000000000 +0200
+@@ -12,42 +12,4 @@
      },    
  );
  
 -sub MY::install {
 -    package MY;
 -    my $script = shift->SUPER::install(@_);
--    if (ExtUtils::MakeMaker::prompt("Do you want XML::SAX to alter ParserDetails.ini?", "Y") =~ /^y/i) {
+-
+-    # Only modify existing ParserDetails.ini if user agrees
+-
+-    my $write_ini_ok = 0;
+-
+-    eval { require XML::SAX };
+-    if ($@) {
+-        $write_ini_ok = 1;
+-    }
+-    else {
+-        my $dir = File::Basename::dirname($INC{'XML/SAX.pm'});
+-        if (-e File::Spec->catfile($dir, 'SAX', 'ParserDetails.ini')) {
+-            $write_ini_ok =
+-                ExtUtils::MakeMaker::prompt(
+-                    "Do you want XML::SAX to alter ParserDetails.ini?", "Y"
+-                ) =~ /^y/i;
+-        }
+-        else {
+-            $write_ini_ok = 1;
+-        }
+-    }
+-    
+-    if ($write_ini_ok) {
 -        $script =~ s/install :: (.*)$/install :: $1 install_sax_pureperl/m;
 -        $script .= <<"INSTALL";
 -

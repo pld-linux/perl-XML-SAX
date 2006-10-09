@@ -16,6 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ab13c04a3cf63a0ae63fa73c863cf23e
 Patch0:		%{name}-noalter.patch
+URL:		http://search.cpan.org/dist/XML-SAX/
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13

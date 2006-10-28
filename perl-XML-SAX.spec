@@ -3,19 +3,20 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	SAX
+%define		pdir	XML
+%define		pnam	SAX
 Summary:	XML::SAX - simple API for XML
 Summary(pl):	XML::SAX - proste API dla XML-a
 Name:		perl-XML-SAX
-Version:	0.12
-Release:	5
+Version:	0.14
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	bff58bd077a9693fc8cf32e2b95f571f
+# Source0-md5:	ab13c04a3cf63a0ae63fa73c863cf23e
 Patch0:		%{name}-noalter.patch
+URL:		http://search.cpan.org/dist/XML-SAX/
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -41,7 +42,7 @@ bez javowo¶ci.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p1
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \

@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	SAX
 Summary:	XML::SAX - simple API for XML
-Summary(pl):	XML::SAX - proste API dla XML-a
+Summary(pl.UTF-8):   XML::SAX - proste API dla XML-a
 Name:		perl-XML-SAX
 Version:	0.14
 Release:	1
@@ -32,13 +32,13 @@ without requiring programmer intervention. Those of you familiar with
 the DBI will be right at home. Some of the designs come from the Java
 JAXP specification (SAX part), only without the javaness.
 
-%description -l pl
-XML::SAX sk³ada siê z kilku klas tworz±cych szkielet do u¿ywania i
-budowania parserów, filtrów i sterowników SAX2 XML w Perlu. Zadaniem
-modu³u jest umo¿liwienie w³±czania ró¿nych parserów SAX do aplikacji
-bez udzia³u programisty. Znaj±cy modu³y DBI bêd± siê czuli jak w domu.
-Niektóre koncepcje pochodz± ze specyfikacji Java JAXP (czê¶æ SAX), ale
-bez javowo¶ci.
+%description -l pl.UTF-8
+XML::SAX skÅ‚ada siÄ™ z kilku klas tworzÄ…cych szkielet do uÅ¼ywania i
+budowania parserÃ³w, filtrÃ³w i sterownikÃ³w SAX2 XML w Perlu. Zadaniem
+moduÅ‚u jest umoÅ¼liwienie wÅ‚Ä…czania rÃ³Å¼nych parserÃ³w SAX do aplikacji
+bez udziaÅ‚u programisty. ZnajÄ…cy moduÅ‚y DBI bÄ™dÄ… siÄ™ czuli jak w domu.
+NiektÃ³re koncepcje pochodzÄ… ze specyfikacji Java JAXP (czÄ™Å›Ä‡ SAX), ale
+bez javowoÅ›ci.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

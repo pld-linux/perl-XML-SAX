@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	SAX
 Summary:	XML::SAX - simple API for XML
-Summary(pl.UTF-8):   XML::SAX - proste API dla XML-a
+Summary(pl.UTF-8):	XML::SAX - proste API dla XML-a
 Name:		perl-XML-SAX
 Version:	0.14
 Release:	1

@@ -15,11 +15,12 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b62e3754523695c7f5bbcafa3676a38d
 Patch0:		%{name}-noalter.patch
-URL:		http://search.cpan.org/dist/XML-SAX/
+URL:		https://metacpan.org/release/XML-SAX
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-XML-SAX-Base >= 1.05
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires(post):	coreutils
 Requires:	perl-XML-NamespaceSupport >= 0.03
 Requires:	perl-XML-SAX-Base >= 1.05

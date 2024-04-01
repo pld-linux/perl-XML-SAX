@@ -1,7 +1,8 @@
---- XML-SAX-1.00/Makefile.PL.orig	2018-09-29 22:48:19.110360595 +0200
-+++ XML-SAX-1.00/Makefile.PL	2018-09-29 22:49:23.560359858 +0200
-@@ -13,42 +13,3 @@
-     },    
+diff -urNp -x '*.orig' XML-SAX-1.02.org/Makefile.PL XML-SAX-1.02/Makefile.PL
+--- XML-SAX-1.02.org/Makefile.PL	2019-06-14 01:33:42.000000000 +0200
++++ XML-SAX-1.02/Makefile.PL	2024-04-02 01:28:46.729057228 +0200
+@@ -23,42 +23,3 @@ WriteMakefile(
+     },
  );
  
 -sub MY::install {

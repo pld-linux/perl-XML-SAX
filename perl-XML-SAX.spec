@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	XML
 %define		pnam	SAX
@@ -12,10 +12,10 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b62e3754523695c7f5bbcafa3676a38d
 Patch0:		%{name}-noalter.patch
-URL:		https://metacpan.org/release/XML-SAX
+URL:		https://metacpan.org/dist/XML-SAX
 BuildRequires:	perl-XML-NamespaceSupport >= 0.03
 BuildRequires:	perl-XML-SAX-Base >= 1.05
 BuildRequires:	perl-devel >= 1:5.8.0
